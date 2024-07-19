@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:replace="~{/header.html :: header}"></div>
+    사원관리페이지
+
+    <form>
+        사원등록 <br/>
+        사원명 : <input id="ename"/><br/>
+        연락처 : <input id="econtact"/> <br/>
+        직급 : <input id="erank"/> <br/>
+        부서 :<input id="dno"/> <br/>
+        <button type="button" onclick="eAdd()">등록</button>
+    </form>
+
+    <br/>
+    <div>
+        <table>
+            <thead>
+                <tr> <th>사원번호</th> <th>사원명</th> <th>연락처</th> <th>직급</th> <th>부서</th></tr>
+            </thead>
+            <tbody id="eBox">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div th:replace="~{/footer.html :: footer}"></div>
+
+    <script src="/js/employee.js"></script>
+</body>
+</html>
